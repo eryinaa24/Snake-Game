@@ -1,0 +1,328 @@
+/* Reset & Asas */
+
+{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+font-family: 'Nunito', sans-serif;
+background: linear-gradient(135deg, #fbcfe8 0%, #f472b6 50%, #f43f5e 100%);
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 1rem;
+}
+
+.container {
+width: 100%;
+max-width: 42rem;
+}
+
+/* Glassmorphism Card */
+.glass-card {
+background: rgba(255, 255, 255, 0.92);
+backdrop-filter: blur(10px);
+box-shadow: 0 20px 25px -5px rgba(244, 63, 94, 0.3), 0 8px 10px -6px rgba(244, 63, 94, 0.2);
+border-radius: 1.5rem;
+padding: 2rem;
+border: 4px solid #f9a8d4;
+text-align: center;
+}
+
+/* Animasi & Efek Klasik */
+.start-card {
+animation: pulse 3s infinite ease-in-out;
+}
+
+@keyframes pulse {
+0%, 100% { transform: scale(1); }
+50% { transform: scale(1.02); }
+}
+
+.hidden {
+display: none !important;
+}
+
+/* Ikon Bulatan */
+.icon-circle {
+width: 6rem;
+height: 6rem;
+background-color: #fce7f3;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0 auto 1.5rem auto;
+border: 2px solid #f9a8d4;
+box-shadow: inset 0 2px 4px rgba(0,0,0,0.06);
+}
+
+.icon-circle i {
+font-size: 3rem;
+color: #ec4899;
+}
+
+/* Tipografi */
+.main-title {
+font-family: 'Fredoka', cursive;
+font-size: 2.25rem;
+color: #db2777;
+margin-bottom: 1rem;
+}
+
+.subtitle {
+color: #9d174d;
+font-size: 1.125rem;
+font-weight: 600;
+margin-bottom: 2rem;
+}
+
+/* Maklumat Grid Skrin Mula */
+.info-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 1rem;
+margin-bottom: 2rem;
+text-align: left;
+background-color: #fdf2f8;
+padding: 1rem;
+border-radius: 1rem;
+border: 1px solid #fbcfe8;
+}
+
+.info-item {
+display: flex;
+align-items: center;
+gap: 0.75rem;
+color: #be185d;
+font-weight: 600;
+}
+
+.info-item i {
+font-size: 1.25rem;
+}
+
+/* Butang Merah Jambu Utama */
+.pink-btn {
+background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+color: #ffffff;
+font-size: 1.25rem;
+font-weight: 700;
+padding: 1rem 2.5rem;
+border-radius: 9999px;
+border: none;
+cursor: pointer;
+box-shadow: 0 10px 15px -3px rgba(219, 39, 119, 0.4);
+transition: all 0.2s ease-in-out;
+}
+
+.pink-btn:hover {
+transform: translateY(-2px);
+filter: brightness(1.1);
+}
+
+.pink-btn:active {
+transform: scale(0.95);
+}
+
+/* Header Kuiz */
+.quiz-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 1.5rem;
+padding-bottom: 1rem;
+border-bottom: 2px solid #fce7f3;
+}
+
+.step-label {
+font-size: 0.75rem;
+text-transform: uppercase;
+font-weight: 700;
+letter-spacing: 0.05em;
+color: #f472b6;
+display: block;
+text-align: left;
+}
+
+.question-count {
+font-family: 'Fredoka', cursive;
+font-size: 1.5rem;
+color: #db2777;
+}
+
+.stats-group {
+display: flex;
+gap: 1rem;
+align-items: center;
+}
+
+.timer-box {
+background-color: #fce7f3;
+padding: 0.5rem 1rem;
+border-radius: 1rem;
+border: 1px solid #fbcfe8;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+color: #be185d;
+font-weight: 700;
+font-family: monospace;
+font-size: 1.125rem;
+}
+
+.score-box {
+background-color: #ec4899;
+color: #ffffff;
+padding: 0.5rem 1rem;
+border-radius: 1rem;
+font-weight: 700;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+}
+
+.score-box i {
+color: #fde047;
+}
+
+/* Bar Kemajuan */
+.progress-bar-container {
+width: 100%;
+background-color: #fce7f3;
+height: 0.75rem;
+border-radius: 9999px;
+margin-bottom: 1.5rem;
+overflow: hidden;
+border: 1px solid #fbcfe8;
+}
+
+.progress-bar {
+background: linear-gradient(to right, #f472b6, #f43f5e);
+height: 100%;
+width: 0%;
+transition: width 0.3s ease;
+}
+
+/* Kad Soalan */
+.question-card {
+background-color: rgba(253, 242, 248, 0.7);
+padding: 1.5rem;
+border-radius: 1rem;
+border: 1px solid #fbcfe8;
+margin-bottom: 1.5rem;
+box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+#question-text {
+font-size: 1.25rem;
+font-weight: 700;
+color: #831843;
+line-height: 1.6;
+text-align: left;
+}
+
+/* Pilihan Jawapan */
+.options-grid {
+display: grid;
+grid-template-columns: 1fr;
+gap: 1rem;
+margin-bottom: 1.5rem;
+}
+
+@media (min-width: 640px) {
+.options-grid {
+grid-template-columns: repeat(2, 1fr);
+}
+}
+
+.option-btn {
+border: 2px solid #fbcfe8;
+background-color: #ffffff;
+color: #831843;
+font-weight: 700;
+padding: 1rem;
+border-radius: 1rem;
+text-align: left;
+display: flex;
+align-items: center;
+justify-content: space-between;
+cursor: pointer;
+box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+transition: all 0.2s ease;
+font-size: 1rem;
+}
+
+.option-btn:hover:not(:disabled) {
+border-color: #ec4899;
+background-color: #fdf2f8;
+transform: scale(1.01);
+}
+
+/* Status Pilihan Jawapan */
+.option-btn.correct {
+border-color: #10b981 !important;
+background-color: #ecfdf5 !important;
+color: #065f46 !important;
+}
+
+.option-btn.wrong {
+border-color: #f43f5e !important;
+background-color: #fff1f2 !important;
+color: #9f1239 !important;
+}
+
+/* Footer Kuiz */
+.quiz-footer {
+display: flex;
+justify-content: flex-end;
+}
+
+.skip-btn {
+background: none;
+border: none;
+color: #ec4899;
+font-weight: 600;
+font-size: 0.95rem;
+cursor: pointer;
+padding: 0.5rem 1rem;
+border-radius: 0.75rem;
+transition: background-color 0.2s ease;
+}
+
+.skip-btn:hover {
+background-color: rgba(252, 231, 243, 0.5);
+color: #be185d;
+}
+
+/* Skrin Keputusan Grid */
+.result-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 0.75rem;
+margin-bottom: 2rem;
+}
+
+.result-card {
+background-color: #fdf2f8;
+padding: 1rem 0.5rem;
+border-radius: 1rem;
+border: 1px solid #fbcfe8;
+}
+
+.result-label {
+font-size: 0.75rem;
+color: #ec4899;
+font-weight: 700;
+text-transform: uppercase;
+margin-bottom: 0.25rem;
+}
+
+.result-value {
+font-size: 1.5rem;
+font-weight: 800;
+color: #db2777;
+}
