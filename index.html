@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuiz Matematik Mudah Pink 🌸</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Fail CSS Luaran -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Skrin Mula -->
+        <div id="start-screen" class="glass-card start-card">
+            <div class="icon-circle">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <h1 class="main-title">Kuiz Matematik Pink! 🎀</h1>
+            <p class="subtitle">Uji minda anda dengan 20 soalan matematik mudah bertemakan warna pink yang comel!</p>
+            
+            <div class="info-grid">
+                <div class="info-item">
+                    <i class="fa-solid fa-list-check"></i>
+                    <span>20 Soalan Interaktif</span>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-clock"></i>
+                    <span>Masa Berjalan</span>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-trophy"></i>
+                    <span>Skor Segera</span>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <span>Sesuai Semua Umur</span>
+                </div>
+            </div>
+
+            <button id="start-btn" class="pink-btn">
+                Mula Kuiz Sekarang <i class="fa-solid fa-play"></i>
+            </button>
+        </div>
+
+        <!-- Skrin Kuiz -->
+        <div id="quiz-screen" class="glass-card hidden">
+            <!-- Tajuk Skrin & Info -->
+            <div class="quiz-header">
+                <div>
+                    <span class="step-label">Kemajuan</span>
+                    <h2 id="question-number" class="question-count">Soalan 1/20</h2>
+                </div>
+                <div class="stats-group">
+                    <div class="timer-box">
+                        <i class="fa-solid fa-stopwatch"></i>
+                        <span id="timer">00:00</span>
+                    </div>
+                    <div class="score-box">
+                        <i class="fa-solid fa-star"></i>
+                        <span id="current-score">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bar Kemajuan -->
+            <div class="progress-bar-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+
+            <!-- Kad Soalan -->
+            <div class="question-card">
+                <p id="question-text">Memuatkan soalan...</p>
+            </div>
+
+            <!-- Kontena Pilihan Jawapan -->
+            <div id="options-container" class="options-grid"></div>
+
+            <!-- Butang Kawalan -->
+            <div class="quiz-footer">
+                <button id="skip-btn" class="skip-btn">
+                    Langkah Soalan <i class="fa-solid fa-forward"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Skrin Keputusan -->
+        <div id="result-screen" class="glass-card hidden">
+            <div class="icon-circle">
+                <i id="result-icon" class="fa-solid fa-crown"></i>
+            </div>
+
+            <h2 id="result-title" class="main-title">Hebat Sekali! 🎉</h2>
+            <p class="subtitle">Berikut adalah keputusan kuiz anda:</p>
+
+            <div class="result-grid">
+                <div class="result-card">
+                    <p class="result-label">Skor Akhir</p>
+                    <p id="final-score" class="result-value">0/20</p>
+                </div>
+                <div class="result-card">
+                    <p class="result-label">Peratusan</p>
+                    <p id="final-percentage" class="result-value">0%</p>
+                </div>
+                <div class="result-card">
+                    <p class="result-label">Jumlah Masa</p>
+                    <p id="final-time" class="result-value">00:00</p>
+                </div>
+            </div>
+
+            <button id="restart-btn" class="pink-btn">
+                <i class="fa-solid fa-rotate-right"></i> Cuba Lagi
+            </button>
+        </div>
+    </div>
+
+    <!-- Fail JavaScript Luaran -->
+    <script src="script.js"></script>
+</body>
+</html>
